@@ -9,7 +9,7 @@ import Search from "./Component/Search";
 //OUR MAIN COMPONENT FOR RENDERING
 function App() {
   const [formData, setFormData] = useState([])
-  const [search, setSearch] = useState("")
+  const [searchInput, setSearch] = useState("")
 
   //use effect for my form render
   useEffect(() => {
@@ -22,7 +22,7 @@ function App() {
   }, []);
 
 
-  function setSearchString(str) {
+  function setSearchInput(str) {
     setSearch(str);
   }
   //components are rendered here
@@ -30,7 +30,7 @@ function App() {
     <div className="container">
       <Navbar />
       <br />
-      <Search search={search} setSearchString={setSearchString} />
+      <Search searchInput={searchInput} setSearchInput={setSearchInput} />
       <br />
       <Form formData={formData} setFormData={setFormData} />
       <br />

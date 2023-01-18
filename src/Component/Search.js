@@ -1,12 +1,12 @@
 import React from "react";
 
-function Search({ search, setSearchString }) {
+function Search({ searchInput, setSearchInput }) {
     //using state for use search
     // const [searchInput, setSearchInput] = useState("");
     //for change effected in the DOM
     const handleChanger = (e) => {
         e.preventDefault();
-        setSearchString(e.target.value)
+        setSearchInput(e.target.value)
     }
 
 
@@ -14,7 +14,7 @@ function Search({ search, setSearchString }) {
 
     return (
         <form className="d-flex" onInput={handleChanger}>
-            <input onInput={(event) => { setSearchString(event.target.value) }} value={search} type='text' />
+            <input onInput={(event) => { setSearchInput(event.target.value) }} value={searchInput} type='text' />
             <button className="btn btn-outline-success" type="submit">Search</button>
         </form>)
     // }
