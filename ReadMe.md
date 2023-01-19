@@ -12,7 +12,7 @@
 
 # SERVERS
 
--The servers used in this project is:"http://localhost:3000/transactions"
+-The servers used in this project is:"http://localhost:8001/transactions"
 -The data is well stored in the db.json file
 -This is where data is stored and added when user renders a transaction
 
