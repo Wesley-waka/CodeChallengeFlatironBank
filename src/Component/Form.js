@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const Form = () => {
+const Form = ({ formData, setFormData }) => {
   //for local storage
   const [formData, setFormData] = useState({
     date: "",
@@ -31,7 +31,11 @@ const Form = () => {
       ),
     }).then((response) => response.json())
       .then((newPost) => {
-        setFormData(newPost)
+        // setFormData({
+        //   ...formData,
+        //   newPost,
+        // })
+        console.log(newPost);
       });
   }
 
