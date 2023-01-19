@@ -5,7 +5,7 @@ const Table = ({ formData }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:3000/transactions/${formData.id}`, {
+    fetch(`http://localhost:8001/transactions/${formData.id}`, {
       method: 'DELETE'
 
     }).then((r) => r.json())
