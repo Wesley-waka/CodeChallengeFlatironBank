@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const Form = ({ formData, setFormData }) => {
+const Form = () => {
   //for local storage
   const [formData, setFormData] = useState({
     date: "",
@@ -9,7 +9,7 @@ const Form = ({ formData, setFormData }) => {
     category: "",
     amount: 0,
   })
-  //Data Abstraction
+
   //to respond on user change
   function handleChange(event) {
     setFormData({
@@ -31,11 +31,7 @@ const Form = ({ formData, setFormData }) => {
       ),
     }).then((response) => response.json())
       .then((newPost) => {
-        // setFormData({
-        //   ...formData,
-        //   newPost,
-        // })
-        console.log(newPost);
+        setFormData(newPost)
       });
   }
 

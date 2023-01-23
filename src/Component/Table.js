@@ -5,12 +5,13 @@ const Table = ({ formData }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:8001/transactions/${id}`, {
+    fetch(`http://localhost:8001/transactions/${formData.id}`, {
       method: 'DELETE'
 
     }).then((r) => r.json())
       .then(() => console.log("deleted!"));
   }
+  // console.log(formData.id);
   //fetching data from server
 
   return (

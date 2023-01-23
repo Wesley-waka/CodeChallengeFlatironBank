@@ -8,12 +8,7 @@ import Search from "./Component/Search";
 
 //OUR MAIN COMPONENT FOR RENDERING
 function App() {
-  const [formData, setFormData] = useState({
-    date: "",
-    description: "",
-    category: "",
-    amount: 0,
-  })
+  const [formData, setFormData] = useState([])
   const [searchInput, setSearch] = useState("")
 
   //use effect for my form render
